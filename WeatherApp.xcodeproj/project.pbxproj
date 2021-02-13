@@ -14,6 +14,7 @@
 		4FA13CCA25D7B43F004D100A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */; };
 		4FA13CD525D7B440004D100A /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13CD425D7B440004D100A /* WeatherAppTests.swift */; };
 		4FA13CE025D7B440004D100A /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13CDF25D7B440004D100A /* WeatherAppUITests.swift */; };
+		4FA13CFB25D7B926004D100A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA13CFA25D7B926004D100A /* Color.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4FA13CDB25D7B440004D100A /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA13CDF25D7B440004D100A /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		4FA13CE125D7B440004D100A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA13CFA25D7B926004D100A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
 				4FA13CC325D7B43D004D100A /* Main.storyboard */,
 				4FA13CC625D7B43F004D100A /* Assets.xcassets */,
+				4FA13CFA25D7B926004D100A /* Color.xcassets */,
 				4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */,
 				4FA13CCB25D7B43F004D100A /* Info.plist */,
 			);
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA13CCA25D7B43F004D100A /* LaunchScreen.storyboard in Resources */,
+				4FA13CFB25D7B926004D100A /* Color.xcassets in Resources */,
 				4FA13CC725D7B43F004D100A /* Assets.xcassets in Resources */,
 				4FA13CC525D7B43D004D100A /* Main.storyboard in Resources */,
 			);
