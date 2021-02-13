@@ -115,12 +115,11 @@
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
 				4FA13D0425D7BD9E004D100A /* Scene.swift */,
 				4FA13D0925D7BE14004D100A /* Weather.swift */,
-				4FA13D2825D7C898004D100A /* Environment.swift */,
-				4FA13D2D25D7C8FD004D100A /* SessionManager.swift */,
 				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
 				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
-				4FA13CC325D7B43D004D100A /* Main.storyboard */,
+				4FA13D3225D7CAF6004D100A /* Session */,
 				4FA13D1325D7C3E4004D100A /* Resource */,
+				4FA13CC325D7B43D004D100A /* Main.storyboard */,
 				4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */,
 			);
 			path = WeatherApp;
@@ -152,6 +151,15 @@
 				4FA13CCB25D7B43F004D100A /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		4FA13D3225D7CAF6004D100A /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13D2825D7C898004D100A /* Environment.swift */,
+				4FA13D2D25D7C8FD004D100A /* SessionManager.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
