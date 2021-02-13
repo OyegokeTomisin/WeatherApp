@@ -21,6 +21,10 @@
 		4FA13D0F25D7BF94004D100A /* Weather+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */; };
 		4FA13D2925D7C898004D100A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D2825D7C898004D100A /* Environment.swift */; };
 		4FA13D2E25D7C8FD004D100A /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D2D25D7C8FD004D100A /* SessionManager.swift */; };
+		4FA13D3F25D7CB94004D100A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D3E25D7CB94004D100A /* Endpoint.swift */; };
+		4FA13D4425D7CBCA004D100A /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D4325D7CBCA004D100A /* HTTPTask.swift */; };
+		4FA13D4925D7CC00004D100A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D4825D7CC00004D100A /* HTTPMethod.swift */; };
+		4FA13D5525D7CD2B004D100A /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D5425D7CD2B004D100A /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Extension.swift"; sourceTree = "<group>"; };
 		4FA13D2825D7C898004D100A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		4FA13D2D25D7C8FD004D100A /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		4FA13D3E25D7CB94004D100A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4FA13D4325D7CBCA004D100A /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		4FA13D4825D7CC00004D100A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		4FA13D5425D7CD2B004D100A /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,7 @@
 				4FA13D0925D7BE14004D100A /* Weather.swift */,
 				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
 				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
+				4FA13D4D25D7CC20004D100A /* Network */,
 				4FA13D3225D7CAF6004D100A /* Session */,
 				4FA13D1325D7C3E4004D100A /* Resource */,
 				4FA13CC325D7B43D004D100A /* Main.storyboard */,
@@ -160,6 +169,17 @@
 				4FA13D2D25D7C8FD004D100A /* SessionManager.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		4FA13D4D25D7CC20004D100A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13D3E25D7CB94004D100A /* Endpoint.swift */,
+				4FA13D4325D7CBCA004D100A /* HTTPTask.swift */,
+				4FA13D4825D7CC00004D100A /* HTTPMethod.swift */,
+				4FA13D5425D7CD2B004D100A /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,13 +336,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA13D0525D7BD9E004D100A /* Scene.swift in Sources */,
+				4FA13D3F25D7CB94004D100A /* Endpoint.swift in Sources */,
 				4FA13CBE25D7B43D004D100A /* AppDelegate.swift in Sources */,
+				4FA13D4925D7CC00004D100A /* HTTPMethod.swift in Sources */,
 				4FA13D0025D7BC89004D100A /* UIColour+Extension.swift in Sources */,
 				4FA13D2925D7C898004D100A /* Environment.swift in Sources */,
 				4FA13CC025D7B43D004D100A /* SceneDelegate.swift in Sources */,
+				4FA13D4425D7CBCA004D100A /* HTTPTask.swift in Sources */,
 				4FA13D0F25D7BF94004D100A /* Weather+Extension.swift in Sources */,
 				4FA13D2E25D7C8FD004D100A /* SessionManager.swift in Sources */,
 				4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */,
+				4FA13D5525D7CD2B004D100A /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
