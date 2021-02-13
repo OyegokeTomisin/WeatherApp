@@ -7,7 +7,11 @@
 
 import Foundation
 
-typealias NetworkClientResult = Result<HTTPURLResponse, Error>
+public enum NetworkClientResult {
+    case success(Data, HTTPURLResponse)
+    case failure(Error)
+}
+
 typealias NetworkRequestCompletion = (NetworkClientResult) -> Void
 
 protocol EndPoint {
