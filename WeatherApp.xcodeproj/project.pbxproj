@@ -114,10 +114,8 @@
 				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
 				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
 				4FA13CC325D7B43D004D100A /* Main.storyboard */,
-				4FA13CC625D7B43F004D100A /* Assets.xcassets */,
-				4FA13CFA25D7B926004D100A /* Color.xcassets */,
+				4FA13D1325D7C3E4004D100A /* Resource */,
 				4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */,
-				4FA13CCB25D7B43F004D100A /* Info.plist */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -138,6 +136,16 @@
 				4FA13CE125D7B440004D100A /* Info.plist */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		4FA13D1325D7C3E4004D100A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13CC625D7B43F004D100A /* Assets.xcassets */,
+				4FA13CFA25D7B926004D100A /* Color.xcassets */,
+				4FA13CCB25D7B43F004D100A /* Info.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,7 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -493,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = WeatherApp/Info.plist;
+				INFOPLIST_FILE = WeatherApp/Resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
