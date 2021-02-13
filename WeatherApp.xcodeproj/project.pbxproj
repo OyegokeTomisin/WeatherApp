@@ -19,6 +19,7 @@
 		4FA13D0525D7BD9E004D100A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0425D7BD9E004D100A /* Scene.swift */; };
 		4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0925D7BE14004D100A /* Weather.swift */; };
 		4FA13D0F25D7BF94004D100A /* Weather+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */; };
+		4FA13D2925D7C898004D100A /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D2825D7C898004D100A /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4FA13D0425D7BD9E004D100A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		4FA13D0925D7BE14004D100A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather+Extension.swift"; sourceTree = "<group>"; };
+		4FA13D2825D7C898004D100A /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
 				4FA13D0425D7BD9E004D100A /* Scene.swift */,
 				4FA13D0925D7BE14004D100A /* Weather.swift */,
+				4FA13D2825D7C898004D100A /* Environment.swift */,
 				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
 				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
 				4FA13CC325D7B43D004D100A /* Main.storyboard */,
@@ -304,6 +307,7 @@
 				4FA13D0525D7BD9E004D100A /* Scene.swift in Sources */,
 				4FA13CBE25D7B43D004D100A /* AppDelegate.swift in Sources */,
 				4FA13D0025D7BC89004D100A /* UIColour+Extension.swift in Sources */,
+				4FA13D2925D7C898004D100A /* Environment.swift in Sources */,
 				4FA13CC025D7B43D004D100A /* SceneDelegate.swift in Sources */,
 				4FA13D0F25D7BF94004D100A /* Weather+Extension.swift in Sources */,
 				4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */,
