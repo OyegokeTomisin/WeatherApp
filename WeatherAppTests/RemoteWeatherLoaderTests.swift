@@ -110,7 +110,7 @@ class RemoteWeatherLoaderTests: XCTestCase {
         let exp = expectation(description: "Wait for load completion")
 
         let expectedResult =
-            WeatherDataMapper.RemoteWeatherData(name: "Shuzenji", weather: [WeatherDataMapper.WeatherData(weatherID: 803, main: "Clouds", weatherDescription: "broken clouds")], main: WeatherDataMapper.TemperatureData(temp: 281.48, tempMin: 281.48, tempMax: 281.48))
+            RemoteWeatherData(name: "Shuzenji", weather: [WeatherData(weatherID: 803, main: "Clouds", weatherDescription: "broken clouds")], main: TemperatureData(temp: 281.48, tempMin: 281.48, tempMax: 281.48))
 
         sut.load { result in
             switch result {
