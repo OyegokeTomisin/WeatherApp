@@ -17,6 +17,7 @@
 		4FA13CFB25D7B926004D100A /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA13CFA25D7B926004D100A /* Color.xcassets */; };
 		4FA13D0025D7BC89004D100A /* UIColour+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */; };
 		4FA13D0525D7BD9E004D100A /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0425D7BD9E004D100A /* Scene.swift */; };
+		4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D0925D7BE14004D100A /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		4FA13CFA25D7B926004D100A /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColour+Extension.swift"; sourceTree = "<group>"; };
 		4FA13D0425D7BD9E004D100A /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		4FA13D0925D7BE14004D100A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				4FA13CBD25D7B43D004D100A /* AppDelegate.swift */,
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
 				4FA13D0425D7BD9E004D100A /* Scene.swift */,
+				4FA13D0925D7BE14004D100A /* Weather.swift */,
 				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
 				4FA13CC325D7B43D004D100A /* Main.storyboard */,
 				4FA13CC625D7B43F004D100A /* Assets.xcassets */,
@@ -291,6 +294,7 @@
 				4FA13CBE25D7B43D004D100A /* AppDelegate.swift in Sources */,
 				4FA13D0025D7BC89004D100A /* UIColour+Extension.swift in Sources */,
 				4FA13CC025D7B43D004D100A /* SceneDelegate.swift in Sources */,
+				4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
