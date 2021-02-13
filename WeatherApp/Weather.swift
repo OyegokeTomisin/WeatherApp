@@ -11,4 +11,15 @@ enum Weather {
     case rainy(scene: Scene)
     case sunny(scene: Scene)
     case cloudy(scene: Scene)
+
+    var identifier: String {
+        switch self {
+        case .rainy:
+            return "rainy"
+        case .sunny:
+            return "sunny"
+        case .cloudy:
+            return "cloudy"
+        }
+    }
 }
