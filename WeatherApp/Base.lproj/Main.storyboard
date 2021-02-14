@@ -8,20 +8,39 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weather Result View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherResultViewController" id="BYZ-38-t0r" customClass="WeatherResultViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gsi-aG-mbs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="kIJ-3d-sUh"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="46l-4L-AaX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gsi-aG-mbs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J6W-DK-QUJ"/>
+                            <constraint firstItem="gsi-aG-mbs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LeJ-qp-n6w"/>
+                            <constraint firstItem="gsi-aG-mbs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R2X-oe-nXw"/>
+                            <constraint firstAttribute="bottom" secondItem="gsi-aG-mbs" secondAttribute="bottom" id="hgJ-3y-WaU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultTableView" destination="gsi-aG-mbs" id="Pgw-BY-wtt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-70" y="94"/>
+            <point key="canvasLocation" x="-71.014492753623188" y="93.75"/>
         </scene>
     </scenes>
     <resources>
