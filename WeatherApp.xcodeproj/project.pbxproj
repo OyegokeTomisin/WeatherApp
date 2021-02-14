@@ -157,6 +157,55 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		4F2BC0EB25D9DCB8008CB078 /* Weather + ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4F2BC0CD25D9CB73008CB078 /* WeatherResultViewModel.swift */,
+				4F2BC0D225D9CDEA008CB078 /* WeatherForecastViewModel.swift */,
+				4F2BC0C825D9CB66008CB078 /* CurrentWeatherViewModel.swift */,
+			);
+			path = "Weather + ViewModel";
+			sourceTree = "<group>";
+		};
+		4F2BC0EF25D9DCE2008CB078 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F2BC0D725D9D204008CB078 /* LocationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4F2BC0F325D9DCFD008CB078 /* Weather + UI */ = {
+			isa = PBXGroup;
+			children = (
+				4F2BC0BE25D9B865008CB078 /* WeatherResultTableViewCell.swift */,
+				4F2BC0AD25D9B624008CB078 /* WeatherResultHeaderView.swift */,
+			);
+			path = "Weather + UI";
+			sourceTree = "<group>";
+		};
+		4F2BC0F725D9DD2C008CB078 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13D9B25D81A10004D100A /* WeatherLoader.swift */,
+				4F2BC0A325D9B50A008CB078 /* WeatherResultViewController.swift */,
+				4FA13D6425D7CE62004D100A /* Weather + API */,
+				4F2BC0F325D9DCFD008CB078 /* Weather + UI */,
+				4F2BC0EB25D9DCB8008CB078 /* Weather + ViewModel */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		4F2BC0FE25D9DDA1008CB078 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13D0425D7BD9E004D100A /* Scene.swift */,
+				4FA13D0925D7BE14004D100A /* Weather.swift */,
+				4F2BC0DC25D9D49C008CB078 /* UserLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4FA13CB125D7B43D004D100A = {
 			isa = PBXGroup;
 			children = (
@@ -182,18 +231,9 @@
 			children = (
 				4FA13CBD25D7B43D004D100A /* AppDelegate.swift */,
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
-				4FA13D0425D7BD9E004D100A /* Scene.swift */,
-				4FA13D0925D7BE14004D100A /* Weather.swift */,
-				4F2BC0D725D9D204008CB078 /* LocationService.swift */,
-				4F2BC0DC25D9D49C008CB078 /* UserLocation.swift */,
-				4F2BC0BE25D9B865008CB078 /* WeatherResultTableViewCell.swift */,
-				4F2BC0A325D9B50A008CB078 /* WeatherResultViewController.swift */,
-				4F2BC0CD25D9CB73008CB078 /* WeatherResultViewModel.swift */,
-				4F2BC0AD25D9B624008CB078 /* WeatherResultHeaderView.swift */,
-				4F2BC0D225D9CDEA008CB078 /* WeatherForecastViewModel.swift */,
-				4F2BC0C825D9CB66008CB078 /* CurrentWeatherViewModel.swift */,
-				4FA13D9B25D81A10004D100A /* WeatherLoader.swift */,
-				4FA13D6425D7CE62004D100A /* WeatherAPI */,
+				4F2BC0FE25D9DDA1008CB078 /* Models */,
+				4F2BC0F725D9DD2C008CB078 /* Weather */,
+				4F2BC0EF25D9DCE2008CB078 /* Services */,
 				4F2BC0BA25D9B7FD008CB078 /* Extensions */,
 				4FA13D4D25D7CC20004D100A /* Network */,
 				4FA13D3225D7CAF6004D100A /* Session */,
@@ -256,14 +296,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		4FA13D6425D7CE62004D100A /* WeatherAPI */ = {
+		4FA13D6425D7CE62004D100A /* Weather + API */ = {
 			isa = PBXGroup;
 			children = (
 				4FA13D9625D804A0004D100A /* WeatherDataMapper.swift */,
 				4FA13D5F25D7CE3E004D100A /* RemoteWeatherLoader.swift */,
 				4FA13DAD25D82C63004D100A /* RemoteWeatherResponse.swift */,
 			);
-			path = WeatherAPI;
+			path = "Weather + API";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
