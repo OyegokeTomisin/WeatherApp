@@ -38,4 +38,14 @@ final class WeatherResultHeaderView: UIView {
         Bundle.main.loadNibNamed(WeatherResultHeaderView.viewIdentifier, owner: self, options: nil)
         addSubview(contentView)
     }
+
+    func configureView(with viewModel: CurrentWeatherViewModel) {
+        overlay.backgroundColor = viewModel.weather.colour
+        maxLabel.text = viewModel.maxTemp
+        minLabel.text = viewModel.minTemp
+        currentLabel.text = viewModel.currentTemp
+        currentBigLabel.text = viewModel.currentTemp
+        weatherImageView.image = viewModel.weather.headerImage
+        weatherDescriptionLabel.text = viewModel.tempDescription
+    }
 }
