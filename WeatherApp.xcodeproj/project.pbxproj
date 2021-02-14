@@ -146,6 +146,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4F2BC0E125D9DC69008CB078 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13CC325D7B43D004D100A /* Main.storyboard */,
+				4F2BC0A825D9B607008CB078 /* WeatherResultHeaderView.xib */,
+				4F2BC0BF25D9B865008CB078 /* WeatherResultTableViewCell.xib */,
+				4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		4FA13CB125D7B43D004D100A = {
 			isa = PBXGroup;
 			children = (
@@ -186,11 +197,8 @@
 				4F2BC0BA25D9B7FD008CB078 /* Extensions */,
 				4FA13D4D25D7CC20004D100A /* Network */,
 				4FA13D3225D7CAF6004D100A /* Session */,
+				4F2BC0E125D9DC69008CB078 /* Scenes */,
 				4FA13D1325D7C3E4004D100A /* Resource */,
-				4FA13CC325D7B43D004D100A /* Main.storyboard */,
-				4F2BC0A825D9B607008CB078 /* WeatherResultHeaderView.xib */,
-				4F2BC0BF25D9B865008CB078 /* WeatherResultTableViewCell.xib */,
-				4FA13CC825D7B43F004D100A /* LaunchScreen.storyboard */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
