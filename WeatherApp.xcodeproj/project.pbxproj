@@ -30,6 +30,10 @@
 		4FA13D9C25D81A10004D100A /* WeatherLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13D9B25D81A10004D100A /* WeatherLoader.swift */; };
 		4FA13DA425D82550004D100A /* MockCurrentWeatherData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FA13DA325D82550004D100A /* MockCurrentWeatherData.json */; };
 		4FA13DAE25D82C63004D100A /* RemoteWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13DAD25D82C63004D100A /* RemoteWeatherResponse.swift */; };
+		4FA13DB925D83152004D100A /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13DB825D83152004D100A /* NetworkRouter.swift */; };
+		4FA13DBE25D8317C004D100A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13DBD25D8317C004D100A /* RequestBuilder.swift */; };
+		4FA13DCB25D83260004D100A /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13DCA25D83260004D100A /* RequestBuilderTests.swift */; };
+		4FA13DD025D856D1004D100A /* NetworkRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA13DCF25D856D1004D100A /* NetworkRouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		4FA13D9B25D81A10004D100A /* WeatherLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLoader.swift; sourceTree = "<group>"; };
 		4FA13DA325D82550004D100A /* MockCurrentWeatherData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockCurrentWeatherData.json; sourceTree = "<group>"; };
 		4FA13DAD25D82C63004D100A /* RemoteWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteWeatherResponse.swift; sourceTree = "<group>"; };
+		4FA13DB825D83152004D100A /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		4FA13DBD25D8317C004D100A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		4FA13DCA25D83260004D100A /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
+		4FA13DCF25D856D1004D100A /* NetworkRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,8 @@
 			children = (
 				4FA13CD625D7B440004D100A /* Info.plist */,
 				4FA13D7525D7D18B004D100A /* RemoteWeatherLoaderTests.swift */,
+				4FA13DCA25D83260004D100A /* RequestBuilderTests.swift */,
+				4FA13DCF25D856D1004D100A /* NetworkRouterTests.swift */,
 				4FA13DA325D82550004D100A /* MockCurrentWeatherData.json */,
 			);
 			path = WeatherAppTests;
@@ -191,6 +201,8 @@
 				4FA13D4325D7CBCA004D100A /* HTTPTask.swift */,
 				4FA13D4825D7CC00004D100A /* HTTPMethod.swift */,
 				4FA13D5425D7CD2B004D100A /* NetworkClient.swift */,
+				4FA13DBD25D8317C004D100A /* RequestBuilder.swift */,
+				4FA13DB825D83152004D100A /* NetworkRouter.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -363,6 +375,7 @@
 				4FA13D0525D7BD9E004D100A /* Scene.swift in Sources */,
 				4FA13DAE25D82C63004D100A /* RemoteWeatherResponse.swift in Sources */,
 				4FA13D3F25D7CB94004D100A /* Endpoint.swift in Sources */,
+				4FA13DBE25D8317C004D100A /* RequestBuilder.swift in Sources */,
 				4FA13CBE25D7B43D004D100A /* AppDelegate.swift in Sources */,
 				4FA13D4925D7CC00004D100A /* HTTPMethod.swift in Sources */,
 				4FA13D0025D7BC89004D100A /* UIColour+Extension.swift in Sources */,
@@ -374,6 +387,7 @@
 				4FA13D0F25D7BF94004D100A /* Weather+Extension.swift in Sources */,
 				4FA13D2E25D7C8FD004D100A /* SessionManager.swift in Sources */,
 				4FA13D0A25D7BE14004D100A /* Weather.swift in Sources */,
+				4FA13DB925D83152004D100A /* NetworkRouter.swift in Sources */,
 				4FA13D6025D7CE3E004D100A /* RemoteWeatherLoader.swift in Sources */,
 				4FA13D5525D7CD2B004D100A /* NetworkClient.swift in Sources */,
 			);
@@ -384,6 +398,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FA13D7625D7D18B004D100A /* RemoteWeatherLoaderTests.swift in Sources */,
+				4FA13DD025D856D1004D100A /* NetworkRouterTests.swift in Sources */,
+				4FA13DCB25D83260004D100A /* RequestBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
