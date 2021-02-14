@@ -178,8 +178,8 @@
 		4F2BC0F325D9DCFD008CB078 /* Weather + UI */ = {
 			isa = PBXGroup;
 			children = (
-				4F2BC0BE25D9B865008CB078 /* WeatherResultTableViewCell.swift */,
 				4F2BC0AD25D9B624008CB078 /* WeatherResultHeaderView.swift */,
+				4F2BC0BE25D9B865008CB078 /* WeatherResultTableViewCell.swift */,
 			);
 			path = "Weather + UI";
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				4FA13D9B25D81A10004D100A /* WeatherLoader.swift */,
-				4F2BC0A325D9B50A008CB078 /* WeatherResultViewController.swift */,
-				4FA13D6425D7CE62004D100A /* Weather + API */,
 				4F2BC0F325D9DCFD008CB078 /* Weather + UI */,
+				4FA13D6425D7CE62004D100A /* Weather + API */,
 				4F2BC0EB25D9DCB8008CB078 /* Weather + ViewModel */,
+				4F2BC0FF25D9DEA6008CB078 /* Weather + ViewController */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -204,6 +204,14 @@
 				4F2BC0DC25D9D49C008CB078 /* UserLocation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4F2BC0FF25D9DEA6008CB078 /* Weather + ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4F2BC0A325D9B50A008CB078 /* WeatherResultViewController.swift */,
+			);
+			path = "Weather + ViewController";
 			sourceTree = "<group>";
 		};
 		4FA13CB125D7B43D004D100A = {

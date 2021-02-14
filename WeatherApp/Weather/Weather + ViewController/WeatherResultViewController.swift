@@ -39,8 +39,8 @@ final class WeatherResultViewController: UIViewController {
         locationService?.notifyError = { message in
             debugPrint(message)
         }
-        locationService?.notifyUserLocation = { location in
-            debugPrint(location)
+        locationService?.notifyUserLocation = { [weak viewModel] location in
+            viewModel?.requestWeatherData(with: location)
         }
     }
 
@@ -52,7 +52,7 @@ final class WeatherResultViewController: UIViewController {
 extension WeatherResultViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return viewModel.forecastCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

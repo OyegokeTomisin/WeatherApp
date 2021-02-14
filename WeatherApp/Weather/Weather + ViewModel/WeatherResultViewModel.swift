@@ -11,6 +11,14 @@ class WeatherResultViewModel {
 
     let weather: Weather = .sunny(scene: .sea)
 
+    var forecastCount: Int {
+        return 5
+    }
+
+    func requestWeatherData(with userLocation: UserLocation) {
+
+    }
+
     func currentWeather_toViewModel() -> CurrentWeatherViewModel {
         return CurrentWeatherViewModel(weather: weather)
     }
