@@ -21,4 +21,11 @@ final class WeatherResultTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
+    func configureView(with viewModel: WeatherForecastViewModel) {
+        dayLabel.text = viewModel.day
+        temperatureLabel.text = viewModel.temprature
+        weatherIcon.image = viewModel.weather.image
+        contentView.backgroundColor = viewModel.weather.colour
+    }
 }

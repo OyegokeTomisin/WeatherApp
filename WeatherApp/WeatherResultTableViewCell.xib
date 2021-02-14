@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9g-Es-Cbr">
-                                        <rect key="frame" x="10" y="44.5" width="64" height="20.5"/>
+                                        <rect key="frame" x="20" y="44.5" width="64" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -33,7 +33,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="a9g-Es-Cbr" firstAttribute="centerY" secondItem="S12-el-dRU" secondAttribute="centerY" id="gc7-0O-EyE"/>
-                                    <constraint firstItem="a9g-Es-Cbr" firstAttribute="leading" secondItem="S12-el-dRU" secondAttribute="leading" constant="10" id="hTk-ea-yd4"/>
+                                    <constraint firstItem="a9g-Es-Cbr" firstAttribute="leading" secondItem="S12-el-dRU" secondAttribute="leading" constant="20" id="hTk-ea-yd4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g6c-l9-QEP">
@@ -57,7 +57,7 @@
                                 <rect key="frame" x="223.5" y="0.0" width="111.5" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCs-vK-SEd">
-                                        <rect key="frame" x="82" y="44.5" width="19.5" height="20.5"/>
+                                        <rect key="frame" x="72" y="44.5" width="19.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="cCs-vK-SEd" firstAttribute="centerY" secondItem="2FM-OK-2lF" secondAttribute="centerY" id="d0t-i4-MaQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="cCs-vK-SEd" secondAttribute="trailing" constant="10" id="hbe-Z9-Bmy"/>
+                                    <constraint firstAttribute="trailing" secondItem="cCs-vK-SEd" secondAttribute="trailing" constant="20" id="hbe-Z9-Bmy"/>
                                 </constraints>
                             </view>
                         </subviews>

@@ -23,6 +23,11 @@ final class WeatherResultViewController: UIViewController {
         resultTableView.register(nib, forCellReuseIdentifier: WeatherResultTableViewCell.viewIdentifier)
         resultTableView.tableFooterView = UIView()
         resultTableView.contentInsetAdjustmentBehavior = .never
+        styleTableBackground()
+    }
+
+    private func styleTableBackground() {
+        resultTableView.backgroundColor = viewModel.weather.colour
     }
 }
 
@@ -34,13 +39,14 @@ extension WeatherResultViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherResultTableViewCell.viewIdentifier) as? WeatherResultTableViewCell else { return UITableViewCell() }
+        cell.configureView(with: viewModel.weatherForecast_toViewModel())
         return cell
     }
 }
 
 extension WeatherResultViewController: UITableViewDelegate {
 
-    var sectionHeaderHeight: CGFloat { return 450.0 }
+    var sectionHeaderHeight: CGFloat { return 460.0 }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = WeatherResultHeaderView()
