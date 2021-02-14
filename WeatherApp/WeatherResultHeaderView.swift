@@ -28,7 +28,7 @@ final class WeatherResultHeaderView: UIView {
     }
     
     private func loadFromNib() {
-        Bundle.main.loadNibNamed("WeatherResultHeaderView", owner: self, options: nil)
+        Bundle.main.loadNibNamed(WeatherResultHeaderView.viewIdentifier, owner: self, options: nil)
         addSubview(contentView)
     }
 }
