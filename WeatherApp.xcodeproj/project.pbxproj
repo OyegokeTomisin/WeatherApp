@@ -122,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2BC0BA25D9B7FD008CB078 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
+				4F2BC0B225D9B789008CB078 /* UIView+Extension.swift */,
+				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4FA13CB125D7B43D004D100A = {
 			isa = PBXGroup;
 			children = (
@@ -149,13 +159,11 @@
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
 				4FA13D0425D7BD9E004D100A /* Scene.swift */,
 				4FA13D0925D7BE14004D100A /* Weather.swift */,
-				4FA13D0E25D7BF94004D100A /* Weather+Extension.swift */,
-				4F2BC0B225D9B789008CB078 /* UIView+Extension.swift */,
 				4F2BC0A325D9B50A008CB078 /* WeatherResultViewController.swift */,
 				4F2BC0AD25D9B624008CB078 /* WeatherResultHeaderView.swift */,
-				4FA13CFF25D7BC89004D100A /* UIColour+Extension.swift */,
 				4FA13D9B25D81A10004D100A /* WeatherLoader.swift */,
 				4FA13D6425D7CE62004D100A /* WeatherAPI */,
+				4F2BC0BA25D9B7FD008CB078 /* Extensions */,
 				4FA13D4D25D7CC20004D100A /* Network */,
 				4FA13D3225D7CAF6004D100A /* Session */,
 				4FA13D1325D7C3E4004D100A /* Resource */,
