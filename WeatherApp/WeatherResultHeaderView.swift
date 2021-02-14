@@ -10,6 +10,13 @@ import UIKit
 final class WeatherResultHeaderView: UIView {
     
     @IBOutlet private var contentView: UIView!
+    @IBOutlet weak private var overlay: UIView!
+    @IBOutlet weak private var maxLabel: UILabel!
+    @IBOutlet weak private var minLabel: UILabel!
+    @IBOutlet weak private var currentLabel: UILabel!
+    @IBOutlet weak private var currentBigLabel: UILabel!
+    @IBOutlet weak private var weatherImageView: UIImageView!
+    @IBOutlet weak private var weatherDescriptionLabel: UILabel!
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

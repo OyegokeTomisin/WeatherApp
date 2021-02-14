@@ -17,9 +17,10 @@ final class WeatherResultViewController: UIViewController {
     }
 
     private func setupViewOnLoad() {
-        resultTableView.tableFooterView = UIView()
         let nib = UINib(nibName: WeatherResultTableViewCell.viewIdentifier, bundle: nil)
         resultTableView .register(nib, forCellReuseIdentifier: WeatherResultTableViewCell.viewIdentifier)
+        resultTableView.tableFooterView = UIView()
+        resultTableView.contentInsetAdjustmentBehavior = .never
     }
 }
 
@@ -37,7 +38,7 @@ extension WeatherResultViewController: UITableViewDataSource {
 
 extension WeatherResultViewController: UITableViewDelegate {
 
-    var sectionHeaderHeight: CGFloat { return 250.0 }
+    var sectionHeaderHeight: CGFloat { return 450.0 }
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return WeatherResultHeaderView()
