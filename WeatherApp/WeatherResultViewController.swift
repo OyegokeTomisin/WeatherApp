@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import CoreLocation
 
 final class WeatherResultViewController: UIViewController {
 
     @IBOutlet weak private var resultTableView: UITableView!
 
     private let viewModel = WeatherResultViewModel()
+    private var locationService: LocationService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +21,27 @@ final class WeatherResultViewController: UIViewController {
     }
 
     private func setupViewOnLoad() {
+        setupTableView()
+        setupLocationService()
+    }
+
+    private func setupTableView() {
         let nib = UINib(nibName: WeatherResultTableViewCell.viewIdentifier, bundle: nil)
         resultTableView.register(nib, forCellReuseIdentifier: WeatherResultTableViewCell.viewIdentifier)
         resultTableView.tableFooterView = UIView()
         resultTableView.contentInsetAdjustmentBehavior = .never
         styleTableBackground()
+    }
+
+    private func setupLocationService() {
+        locationService = LocationService()
+        locationService?.requestLocationServices()
+        locationService?.notifyError = { message in
+            debugPrint(message)
+        }
+        locationService?.notifyUserLocation = { location in
+            debugPrint(location)
+        }
     }
 
     private func styleTableBackground() {

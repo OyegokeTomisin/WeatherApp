@@ -10,12 +10,13 @@ import CoreLocation
 
 class LocationService: NSObject, CLLocationManagerDelegate {
 
-    private let locationManager = CLLocationManager()
+    let locationManager = CLLocationManager()
 
     var notifyError: ((String) -> Void)?
     var notifyUserLocation: ((UserLocation) -> Void)?
 
-    private func checkLocationServices() {
+    func requestLocationServices() {
+        locationManager.requestAlwaysAuthorization()
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
         } else {
