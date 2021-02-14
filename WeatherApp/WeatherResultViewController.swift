@@ -13,5 +13,34 @@ final class WeatherResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewOnLoad()
+    }
+
+    private func setupViewOnLoad() {
+        resultTableView.tableFooterView = UIView()
+    }
+}
+
+extension WeatherResultViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+extension WeatherResultViewController: UITableViewDelegate {
+    
+    var sectionHeaderHeight: CGFloat { return 250.0 }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return WeatherResultHeaderView()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeaderHeight
     }
 }
