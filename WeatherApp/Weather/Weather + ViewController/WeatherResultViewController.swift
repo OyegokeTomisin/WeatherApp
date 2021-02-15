@@ -11,6 +11,7 @@ import CoreLocation
 final class WeatherResultViewController: UIViewController {
 
     @IBOutlet weak private var resultTableView: UITableView!
+    private lazy var pullToRefresh = UIRefreshControl()
 
     private let viewModel = WeatherResultViewModel()
     private var locationService: LocationService?
@@ -26,6 +27,7 @@ final class WeatherResultViewController: UIViewController {
         setupLocationService()
         viewModel.notifyRefresh = { [weak self] in
             self?.resultTableView.reloadData()
+            self?.pullToRefresh.endRefreshing()
             self?.styleTableBackground()
         }
     }
@@ -36,9 +38,12 @@ final class WeatherResultViewController: UIViewController {
         resultTableView.tableFooterView = UIView()
         resultTableView.contentInsetAdjustmentBehavior = .never
         styleTableBackground()
+
+        pullToRefresh.addTarget(self, action: #selector(setupLocationService), for: .valueChanged)
+        resultTableView.addSubview(pullToRefresh)
     }
 
-    private func setupLocationService() {
+    @objc private func setupLocationService() {
         locationService = LocationService()
         locationService?.requestLocationServices()
         locationService?.notifyError = { message in
