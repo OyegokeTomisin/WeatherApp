@@ -10,12 +10,18 @@ import Foundation
 final class WeatherService {
 
     let client: NetworkClient
+    let location: UserLocation
 
-    init (client: NetworkClient) {
-        self.client = client
+    private var query: WeatherLocationRequest {
+        return WeatherLocationRequest(location: location)
     }
 
-    private func fetchWeatherData(completion: @escaping (WeatherResult?, WeatherResult?) -> Void) {
+    init(client: NetworkClient, location: UserLocation) {
+        self.client = client
+        self.location = location
+    }
+
+    func fetchWeatherData(completion: @escaping (WeatherResult?, WeatherResult?) -> Void) {
 
         var currentGroup: WeatherResult?
         var forecastGroup: WeatherResult?
@@ -23,13 +29,13 @@ final class WeatherService {
         let dispatchGroup = DispatchGroup()
 
         dispatchGroup.enter()
-        fetchCurrenWeatherData(endpoint: .current) { result in
+        fetchCurrenWeatherData(endpoint: .current(query: query)) { result in
             dispatchGroup.leave()
             currentGroup = result
         }
 
         dispatchGroup.enter()
-        fetchWeatherForcast(endpoint: .forecast) { result in
+        fetchWeatherForcast(endpoint: .forecast(query: query)) { result in
             dispatchGroup.leave()
             forecastGroup = result
         }
@@ -39,12 +45,12 @@ final class WeatherService {
         }
     }
 
-    func fetchCurrenWeatherData(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
+    private func fetchCurrenWeatherData(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
         let loader = RemoteWeatherLoader(endpoint: endpoint, client: client)
         loader.load(completion: completion)
     }
 
-    func fetchWeatherForcast(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
+    private func fetchWeatherForcast(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
         let loader = RemoteWeatherLoader(endpoint: endpoint, client: client)
         loader.load(completion: completion)
     }

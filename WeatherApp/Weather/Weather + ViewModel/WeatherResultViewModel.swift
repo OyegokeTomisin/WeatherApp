@@ -16,7 +16,10 @@ class WeatherResultViewModel {
     }
 
     func requestWeatherData(with userLocation: UserLocation) {
+        let service = WeatherService(client: NetworkRouter(), location: userLocation)
+        service.fetchWeatherData { currentWeatherResponse, weatherForecastResponse in
 
+        }
     }
 
     func currentWeather_toViewModel() -> CurrentWeatherViewModel {

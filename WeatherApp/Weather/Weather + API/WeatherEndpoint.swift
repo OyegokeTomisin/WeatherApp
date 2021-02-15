@@ -8,8 +8,8 @@
 import Foundation
 
 enum WeatherEndpoint {
-    case current
-    case forecast
+    case current(query: EndpointParameter)
+    case forecast(query: EndpointParameter)
 }
 
 extension WeatherEndpoint: EndPoint {
