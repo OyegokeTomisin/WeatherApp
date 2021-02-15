@@ -60,7 +60,7 @@ extension WeatherResultViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherResultTableViewCell.viewIdentifier) as? WeatherResultTableViewCell else { return UITableViewCell() }
-        cell.configureView(with: viewModel.weatherForecast_toViewModel())
+        cell.configureView(with: viewModel.weatherForecast_toViewModel(for: indexPath.row))
         return cell
     }
 }
