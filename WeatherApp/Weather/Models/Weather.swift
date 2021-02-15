@@ -12,6 +12,8 @@ enum Weather {
     case sunny(scene: Scene)
     case cloudy(scene: Scene)
 
+    static var appScene: Scene = .forest
+
     var identifier: String {
         switch self {
         case .rainy:

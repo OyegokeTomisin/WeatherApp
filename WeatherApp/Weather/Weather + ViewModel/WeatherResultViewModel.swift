@@ -9,7 +9,7 @@ import Foundation
 
 class WeatherResultViewModel {
 
-    let weather: Weather = .sunny(scene: .sea)
+    var weather: Weather = .sunny(scene: .sea)
 
     /*
      The Weather API includes weather forecast data with 3-hour step
@@ -17,7 +17,7 @@ class WeatherResultViewModel {
      Therefore the total forecast over 5 days will be 5 * 8
     */
     private var limit: Int {
-        return 5 * (24/3)
+        return 40
     }
 
     var notifyError: ((String) -> Void)?
@@ -34,6 +34,12 @@ class WeatherResultViewModel {
     func weatherForecast_toViewModel(for index: Int) -> WeatherForecastViewModel {
         let forecastData = getFiveDayForcast()[index]
         return WeatherForecastViewModel(weather: weather, tempratureData: forecastData.main, date: forecastData.forecastDate)
+    }
+
+    func setScene() {
+        if let currentWeather = currentWeatherData?.weather?.first?.main, let localizedWeather = RemoteWeather(rawValue: currentWeather.lowercased())?.localized {
+            weather = localizedWeather
+        }
     }
 
     private func getFiveDayForcast() -> [ForeCastData] {
@@ -83,6 +89,7 @@ class WeatherResultViewModel {
                     self?.notifyError?(error.localizedDescription)
                 }
             }
+            self?.setScene()
             self?.notifyRefresh?()
         }
     }

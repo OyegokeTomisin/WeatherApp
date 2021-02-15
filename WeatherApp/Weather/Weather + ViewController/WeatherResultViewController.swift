@@ -21,10 +21,12 @@ final class WeatherResultViewController: UIViewController {
     }
 
     private func setupViewOnLoad() {
+        Weather.appScene = .forest // Change enum to switch to the sea scen
         setupTableView()
         setupLocationService()
         viewModel.notifyRefresh = { [weak self] in
             self?.resultTableView.reloadData()
+            self?.styleTableBackground()
         }
     }
 
