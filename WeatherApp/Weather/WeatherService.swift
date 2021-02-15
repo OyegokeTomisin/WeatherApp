@@ -10,18 +10,13 @@ import Foundation
 final class WeatherService {
 
     let client: NetworkClient
-    let location: UserLocation
 
-    private var query: WeatherLocationRequest {
-        return WeatherLocationRequest(location: location)
-    }
-
-    init(client: NetworkClient, location: UserLocation) {
+    init(client: NetworkClient) {
         self.client = client
-        self.location = location
     }
 
-    func fetchWeatherData(completion: @escaping (WeatherResult?, WeatherResult?) -> Void) {
+    func fetchWeatherData(currentWeatherQuery: WeatherLocationRequest, forecastQuery: WeatherLocationRequest,
+                          completion: @escaping (WeatherResult?, WeatherResult?) -> Void) {
 
         var currentGroup: WeatherResult?
         var forecastGroup: WeatherResult?
@@ -29,13 +24,15 @@ final class WeatherService {
         let dispatchGroup = DispatchGroup()
 
         dispatchGroup.enter()
-        fetchCurrenWeatherData(endpoint: .current(query: query)) { result in
+        let currentGroupLoader = RemoteWeatherLoader(endpoint: WeatherEndpoint.current(query: currentWeatherQuery), client: client)
+        currentGroupLoader.load { result in
             dispatchGroup.leave()
             currentGroup = result
         }
 
         dispatchGroup.enter()
-        fetchWeatherForcast(endpoint: .forecast(query: query)) { result in
+        let forecastGroupLoader = RemoteWeatherLoader(endpoint: WeatherEndpoint.forecast(query: forecastQuery), client: client)
+        forecastGroupLoader.load { result in
             dispatchGroup.leave()
             forecastGroup = result
         }
@@ -43,15 +40,5 @@ final class WeatherService {
         dispatchGroup.notify(queue: .main) {
             completion(currentGroup, forecastGroup)
         }
-    }
-
-    private func fetchCurrenWeatherData(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
-        let loader = RemoteWeatherLoader(endpoint: endpoint, client: client)
-        loader.load(completion: completion)
-    }
-
-    private func fetchWeatherForcast(endpoint: WeatherEndpoint, completion: @escaping (WeatherResult) -> Void) {
-        let loader = RemoteWeatherLoader(endpoint: endpoint, client: client)
-        loader.load(completion: completion)
     }
 }

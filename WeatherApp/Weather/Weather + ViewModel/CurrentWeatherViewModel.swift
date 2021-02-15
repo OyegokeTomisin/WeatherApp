@@ -10,20 +10,22 @@ import Foundation
 struct CurrentWeatherViewModel {
 
     let weather: Weather
+    let weatherData: WeatherData?
+    let tempData: TemperatureData?
 
     var maxTemp: String {
-        return String(17)
+        return String(tempData?.tempMax ?? 0)
     }
 
     var minTemp: String {
-        return String(10)
+        return String(tempData?.tempMin ?? 0)
     }
 
     var currentTemp: String {
-        return String(15)
+        return String(tempData?.temp ?? 0)
     }
 
-    var tempDescription: String {
-        return "Sunny".uppercased()
+    var tempDescription: String? {
+        return weatherData?.main.uppercased()
     }
 }

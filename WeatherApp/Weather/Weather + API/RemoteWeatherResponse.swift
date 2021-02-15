@@ -8,9 +8,10 @@
 import Foundation
 
 struct RemoteWeatherData: Decodable {
-    let name: String
-    let weather: [WeatherData]
-    let main: TemperatureData
+    let name: String?
+    let weather: [WeatherData]?
+    let main: TemperatureData?
+    let list: [ForeCastData]?
 }
 
 struct TemperatureData: Decodable {
@@ -33,4 +34,9 @@ struct WeatherData: Decodable {
         case weatherID = "id"
         case weatherDescription = "description"
     }
+}
+
+struct ForeCastData: Decodable {
+    let weather: [WeatherData]
+    let main: TemperatureData
 }

@@ -23,6 +23,9 @@ final class WeatherResultViewController: UIViewController {
     private func setupViewOnLoad() {
         setupTableView()
         setupLocationService()
+        viewModel.notifyRefresh = { [weak self] in
+            self?.resultTableView.reloadData()
+        }
     }
 
     private func setupTableView() {
