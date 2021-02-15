@@ -20,7 +20,7 @@ struct WeatherForecastViewModel {
     }
 
     var temprature: String {
-        return String(tempratureData?.temp ?? 0)
+        return String(tempratureData?.temp ?? 0) + " °"
     }
 
     private func formatDate(_ date: String) -> String {
