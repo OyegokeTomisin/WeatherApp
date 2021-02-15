@@ -197,6 +197,8 @@
 			children = (
 				4FA13D9B25D81A10004D100A /* WeatherLoader.swift */,
 				4F2BC10E25D9EA3E008CB078 /* WeatherService.swift */,
+				4F2BC11825D9F334008CB078 /* WeatherLocationRequest.swift */,
+				4F2BC0FE25D9DDA1008CB078 /* Models */,
 				4F2BC0F325D9DCFD008CB078 /* Weather + UI */,
 				4FA13D6425D7CE62004D100A /* Weather + API */,
 				4F2BC0EB25D9DCB8008CB078 /* Weather + ViewModel */,
@@ -211,7 +213,6 @@
 				4FA13D0425D7BD9E004D100A /* Scene.swift */,
 				4FA13D0925D7BE14004D100A /* Weather.swift */,
 				4F2BC0DC25D9D49C008CB078 /* UserLocation.swift */,
-				4F2BC11825D9F334008CB078 /* WeatherLocationRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,7 +250,6 @@
 			children = (
 				4FA13CBD25D7B43D004D100A /* AppDelegate.swift */,
 				4FA13CBF25D7B43D004D100A /* SceneDelegate.swift */,
-				4F2BC0FE25D9DDA1008CB078 /* Models */,
 				4F2BC0F725D9DD2C008CB078 /* Weather */,
 				4F2BC0EF25D9DCE2008CB078 /* Services */,
 				4F2BC0BA25D9B7FD008CB078 /* Extensions */,
