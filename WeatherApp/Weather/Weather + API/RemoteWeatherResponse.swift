@@ -39,4 +39,11 @@ struct WeatherData: Decodable {
 struct ForeCastData: Decodable {
     let weather: [WeatherData]
     let main: TemperatureData
+    let forecastDate: String
+
+    enum CodingKeys: String, CodingKey {
+        case main
+        case weather
+        case forecastDate = "dt_txt"
+    }
 }
