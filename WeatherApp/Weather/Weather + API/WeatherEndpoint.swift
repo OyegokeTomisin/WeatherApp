@@ -30,7 +30,10 @@ extension WeatherEndpoint: EndPoint {
     }
 
     var task: HTTPTask {
-        return .request
+        switch self {
+        case let .current(query), let .forecast(query):
+            return .requestWithParameters(urlParameters: query.asParameter)
+        }
     }
 
     var httpMethod: HTTPMethod {

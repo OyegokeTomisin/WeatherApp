@@ -9,5 +9,5 @@ import Foundation
 
 enum HTTPTask {
     case request
-    case requestWithParameters
+    case requestWithParameters(urlParameters: Parameter? = nil)
 }
